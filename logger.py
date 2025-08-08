@@ -6,7 +6,7 @@ from pathlib import Path
 
 import serial  # pip install pyserial
 
-SERIAL_PORT = "COM4"   # <-- tu puerto en Windows
+SERIAL_PORT = "COM3"   # <-- tu puerto en Windows
 BAUDRATE = 9600
 OUTPUT_FILE = Path("lecturas.txt")
 

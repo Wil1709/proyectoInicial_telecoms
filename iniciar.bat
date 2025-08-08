@@ -1,10 +1,10 @@
 @echo off
 REM ==========================================================
 REM Iniciar Logger (Arduino) + Backend FastAPI (Windows)
-REM Ruta del proyecto: C:\xampp\htdocs\proyecto_inicial
+REM Ruta del proyecto: C:\xampp\htdocs\proyectoInicial_telecoms
 REM ==========================================================
 
-set "ROOT=C:\xampp\htdocs\proyecto_inicial"
+set "ROOT=C:\xampp\htdocs\proyectoInicial_telecoms"
 
 REM Ir a la carpeta del proyecto
 cd /d "%ROOT%" || (
@@ -42,7 +42,7 @@ if not exist "lecturas.txt" type nul > "lecturas.txt"
 
 echo.
 echo === Iniciando procesos ===
-echo (Recuerda cerrar el Monitor Serial del IDE de Arduino para liberar COM4)
+echo (Recuerda cerrar el Monitor Serial del IDE de Arduino para liberar COM3)
 
 REM Iniciar logger en una ventana separada
 start "Logger - Arduino" cmd /k "title Logger - Arduino & %PYCMD% logger.py"
@@ -56,7 +56,7 @@ start "Backend - FastAPI" cmd /k %PYCMD% -m uvicorn backend:app --reload --port 
 echo.
 echo ===============================================
 echo Procesos levantados:
-echo   - Logger leyendo COM4 (ventana "Logger - Arduino")
+echo   - Logger leyendo COM3 (ventana "Logger - Arduino")
 echo   - Backend en http://127.0.0.1:8000 (ventana "Backend - FastAPI")
 echo Cierra esas ventanas para detenerlos.
 echo ===============================================
